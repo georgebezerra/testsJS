@@ -1,3 +1,5 @@
+// 1- Object to query string
+
 //SEM REFATORAR
 // module.exports.queryString = obj => {
 //   console.log(Object.entries(obj));
@@ -49,3 +51,53 @@ const keyValueToString = ([key, value]) => {
 
 module.exports.queryString = obj =>
   Object.entries(obj).map(keyValueToString).join('&');
+
+// 2 - Query string to object
+
+module.exports.parse = string => {
+  console.log(string.split('&'));
+};
+
+module.exports.parse = string => {
+  console.log(
+    string.split('&').map(item => {
+      return item.split('=');
+    }),
+  );
+};
+
+module.exports.parse = string => {
+  return Object.fromEntries(
+    string.split('&').map(item => {
+      return item.split('=');
+    }),
+  );
+};
+
+module.exports.parse = string =>
+  Object.fromEntries(string.split('&').map(item => item.split('=')));
+
+//SEM REFATORAR
+module.exports.parse = string =>
+  Object.fromEntries(
+    string.split('&').map(item => {
+      const parts = item.split('=');
+      if (parts[1].indexOf(',') > 1) {
+        parts[1] = parts[1].split(',');
+      }
+      return parts;
+    }),
+  );
+
+//REFATORANDO
+module.exports.parse = string =>
+  Object.fromEntries(
+    string.split('&').map(item => {
+      let [key, value] = item.split('=');
+
+      if (value.indexOf(',') > 1) {
+        value = value.split(',');
+      }
+      return [key, value];
+    }),
+  );
