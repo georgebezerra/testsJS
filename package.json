@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --maxWorkers=50%",
-    "test:watch": "jest --watchAll --maxWorkers=25%"
+    "test:watch": "jest --watchAll --maxWorkers=25%",
+    "test:coverage": "jest --coverage --maxWorkers=25%"
   },
   "repository": {
     "type": "git",
