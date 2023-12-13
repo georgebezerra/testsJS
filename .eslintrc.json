@@ -1,0 +1,25 @@
+{
+    "env": {
+      "jest": true,
+      "node": true,
+      "es2021": true,
+      "browser": true,
+      "commonjs": true
+    },
+    "extends": [
+        "prettier",
+        "eslint:recommended"
+    ],
+    "parserOptions": {
+      "sourceType": "module",
+      "ecmaVersion": "latest"
+    },
+  "plugins": ["prettier"],
+    "rules": {
+      "arrow-body-style": "off",
+      "semi": ["off", "always"],
+      "prettier/prettier": "off",
+      "quotes": ["error", "single"],
+      "prefer-arrow-callback": "off"
+    }
+}
