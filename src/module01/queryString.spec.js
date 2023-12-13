@@ -23,7 +23,7 @@ describe('Object to query string', () => {
   it('should throw an error when an object is passed a value', () => {
     const obj = {
       name: 'George',
-      abilites: {
+      abilities: {
         first: 'JS',
         second: 'TDD',
       },
