@@ -2,12 +2,16 @@
 
 # User-specific stuff
 .idea/**/shelf
-.idea/**/vcs.xml
-.idea/vcs.xml
+
 .idea/**/tasks.xml
 .idea/**/dictionaries
 .idea/**/workspace.xml
 .idea/**/usage.statistics.xml
+.idea/**/vcs.xml
+.idea/.gitignore
+.idea/modules.xml
+.idea/testsJS.iml
+.idea/vcs.xml
 
 # Logs
 logs
