@@ -1,8 +1,8 @@
-const { sum } = require('./calculator')
-const { sumFALSEPOSITIVE } = require('./calculator')
+const { sum } = require('./calculator');
+const { sumFALSEPOSITIVE } = require('./calculator');
 
 it('should sum 2 and 2 and the result must be 4', function () {
-    expect(sum(2,2)).toBe(4);
+  expect(sum(2, 2)).toBe(4);
 });
 
 // it('TESTANDO O FALSO POSITIVO', function () {
@@ -14,23 +14,19 @@ it('should sum 2 and 2 and the result must be 4', function () {
 
 //assinatura para capturar o ERRO quando o método for disparado.
 it('should throw an error if what is provided to the method cannot be summed', function () {
-    expect(() => {
-        sum('', '2')
-    }).toThrowError()
+  expect(() => {
+    sum('', '2');
+  }).toThrowError();
 
-    expect(() => {
-        sum([2,2])
-    }).toThrowError()
+  expect(() => {
+    sum([2, 2]);
+  }).toThrowError();
 
-    // expect(() => {
-    //     sum([2,2])
-    // }).not.toThrowError()
+  expect(() => {
+    sum({});
+  }).toThrowError();
 
-    expect(() => {
-        sum({})
-    }).toThrowError()
-
-    expect(() => {
-        sum()
-    }).toThrowError()
-}); 
+  expect(() => {
+    sum();
+  }).toThrowError();
+});
